@@ -1,14 +1,7 @@
 package org.yli.learning;
 
-import com.google.common.collect.Lists;
-
 import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
 
-/**
- * Created by yli on 6/9/2015.
- */
 public class FullPermutation {
 
     private int[] a;
