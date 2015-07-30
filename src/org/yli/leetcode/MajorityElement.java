@@ -27,4 +27,32 @@ public class MajorityElement {
 
         return -1;
     }
+
+    public int majorityElement2(int[] num) {
+        int m = 0, n = 0;
+
+        for (int i : num) {
+            if (m == i) {
+                ++n;
+            } else if (n == 0) {
+                m = i;
+                n = 1;
+            } else {
+                --n;
+            }
+        }
+
+        n = 0;
+        for (int i : num) {
+            if (i == m) {
+                ++n;
+            }
+        }
+
+        if (n > num.length / 2) {
+            return m;
+        } else {
+            return -1;
+        }
+    }
 }
